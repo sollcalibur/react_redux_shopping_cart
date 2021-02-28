@@ -1,24 +1,21 @@
-.item-wrapper {
-    text-align: left;
-    padding: 10px;
-}
-
 .item {
+    border-width: 1px;
     border-style: solid;
-    border-radius: 3px;
-    border-color: dimgray;
-    padding: 5px;
+    border-radius: 5px;
+    border-color: lightgray;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5px;
 }
 
-.item-body {
-    margin: 15px;
+.item-body-section-a {
+    display: inline-block;
+    text-align: left;
+    width: 60%;
 }
 
-.item-info {
-    display: inline;
-}
-
-.item-actions {
-    float: right;
-    margin-right: 10px;
+.item-body-section-b {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
 }

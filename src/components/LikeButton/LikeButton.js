@@ -1,5 +1,4 @@
 import React from "react";
-// import { connect } from 'react-redux';
 import './LikeButton.css';
 
 class LikeButton extends React.Component {
@@ -13,7 +12,6 @@ class LikeButton extends React.Component {
     }
 
     onClickLikeButton = (e) => {
-        console.log('like btn clicked');
         this.setState({
             buttonName: this.state.buttonName === "Like" ? "Unlike" : "Like",
             buttonStyle: this.state.buttonStyle === "like-button" ? "unlike-button" : "like-button"
@@ -28,7 +26,4 @@ class LikeButton extends React.Component {
         );
     }
 }
-
-// const mapDispatchToProps = {};
-
 export default LikeButton;

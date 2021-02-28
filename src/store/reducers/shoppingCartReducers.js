@@ -6,38 +6,59 @@ const initialState = {
         {
             itemId: 1,
             itemName: 'RX 6900 XT Graphics Card',
-            itemPrice: 'PHP 60000',
-            itemBrand: 'AMD'
+            itemPrice: '60000',
+            itemBrand: 'AMD',
+            itemType: 'GPU'
         },
         {
             itemId: 2,
-            itemName: 'RX 6800 XT Graphics Card',
-            itemPrice: 'PHP 40000',
-            itemBrand: 'AMD'
+            itemName: 'Ryzen Threadripper 2990WX Processor',
+            itemPrice: '40000',
+            itemBrand: 'AMD',
+            itemType: 'CPU'
         },
         {
             itemId: 3,
-            itemName: 'RX 6700 XT Graphics Card',
-            itemPrice: 'PHP 30000',
-            itemBrand: 'AMD'
+            itemName: 'NVIDIA RTX 3090 Graphics Card',
+            itemPrice: '100000',
+            itemBrand: 'NVIDIA',
+            itemType: 'GPU'
         },
         {
             itemId: 4,
-            itemName: 'RX 6700 Graphics Card',
-            itemPrice: 'PHP 25000',
-            itemBrand: 'AMD'
+            itemName: 'Ryzen 9 3950X Processor',
+            itemPrice: '50000',
+            itemBrand: 'AMD',
+            itemType: 'CPU'
+        },
+        {
+            itemId: 5,
+            itemName: 'Core i9 10th Gen 10900K Processor',
+            itemPrice: '50000',
+            itemBrand: 'Intel',
+            itemType: 'CPU'
+        },
+        {
+            itemId: 6,
+            itemName: 'AMD Radeon Instinct Mi60 Server Accelerator',
+            itemPrice: '100000',
+            itemBrand: 'AMD',
+            itemType: 'GPU'
+        },
+        {
+            itemId: 7,
+            itemName: 'NVIDIA RTX 3080Ti Graphics Card',
+            itemPrice: '100000',
+            itemBrand: 'NVIDIA',
+            itemType: 'GPU'
         }
     ],
 
     myCart: [
     ],
-
-    myLikedItems: [
-    ]
 }
 
 export default function shoppingCartReducers(state = initialState, action) {
-    console.log(action.payload)
     switch (action.type) {
         case ADD_TO_CART:
             return {

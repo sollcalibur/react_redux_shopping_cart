@@ -13,7 +13,7 @@ function App() {
   return (
     <Provider store={myStore}>
       <div className="App">
-        <h3>Like Button</h3>
+        <h3>The Hardware Shop</h3>
         <div className={'container'}>
           <ItemsList></ItemsList>
           <ShoppingCart></ShoppingCart>

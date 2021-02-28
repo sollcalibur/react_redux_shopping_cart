@@ -1,40 +1,27 @@
-import React from "react";
-import { connect } from 'react-redux';
+import Button from '../Button/Button';
 import LikeButton from '../LikeButton/LikeButton';
 import './Item.css';
 
-class Item extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentDidUpdate(prevState) {
-
-    }
-
-    render() {
-        return (
-            <tr>
-                <td>
-                    {this.props.itemName}
-                </td>
-                <td>
-                    {this.props.itemPrice}
-                </td>
-                <td>
-                    <LikeButton></LikeButton>
-                </td>
-            </tr>
-        );
-    }
+function Item(props) {
+    return (
+        <div className={'item'}>
+            <div className={'item-body-section-a'}>
+                <h4>
+                    {props.itemName}
+                </h4>
+                <p>
+                    {props.itemType} | {props.itemBrand}
+                </p>
+            </div>
+            <div className={'item-body-section-b'}>
+                <p>
+                    PHP {props.itemPrice}.00
+                </p>
+                <LikeButton></LikeButton>
+                <Button click={props.click} buttonname={props.buttonname}></Button>
+            </div>
+        </div>
+    );
 }
-
-// const mapDispatchToProps = {};
 
 export default Item;

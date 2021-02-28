@@ -12,10 +12,15 @@ class ShoppingCart extends React.Component {
     }
 
     render() {
+        let totalPrice = 0;
+        this.props.myCart.forEach((item) => (
+            totalPrice = totalPrice + parseInt(item.itemPrice)
+        ));
+
         return (
             <div className={'shopping-wrapper'}>
                 <div className={'shopping-cart'}>
-                    <h3>My Cart</h3>
+                    <h3>My Shopping Cart</h3>
                     <table className={'shopping-table'}>
                         <thead>
                             <tr>
@@ -46,6 +51,9 @@ class ShoppingCart extends React.Component {
                             ))}
                         </tbody>
                     </table>
+                    <p>
+                        Total Price: {totalPrice}
+                    </p>
                 </div>
             </div>
         );

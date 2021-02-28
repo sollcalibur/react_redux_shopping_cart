@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
-import LikeButton from '../LikeButton/LikeButton';
-import Button from '../Button/Button';
+import Item from '../Item/Item';
 
 import { addToCart } from '../../store/actions/index';
 
@@ -10,7 +9,7 @@ import './ItemsList.css';
 class ItemsList extends React.Component {
 
     onClickAddToCart = item => e => {
-        console.log(item);
+        alert(item.itemName + ' added to cart.');
         this.props.addToCart(item);
     }
 
@@ -18,44 +17,18 @@ class ItemsList extends React.Component {
         return (
             <div className={'items-wrapper'}>
                 <div className={'items-list'}>
-                    <h3>Items List</h3>
-                    <table className={'items-table'}>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Item Name
-                            </th>
-                                <th>
-                                    Price
-                            </th>
-                                <th>
-                                    Brand
-                            </th>
-                                <th>
-                                    Action
-                            </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.props.items.map((item, index) => (
-                                <tr key={index}>
-                                    <td>
-                                        {item.itemName}
-                                    </td>
-                                    <td>
-                                        {item.itemPrice}
-                                    </td>
-                                    <td>
-                                        {item.itemBrand}
-                                    </td>
-                                    <td>
-                                        <LikeButton></LikeButton>
-                                        <Button click={this.onClickAddToCart(item)} buttonname={'Add To Cart'}></Button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <h3>Items</h3>
+                    {this.props.items.map((item, index) => (
+                        <Item
+                            key={index}
+                            itemName={item.itemName}
+                            itemPrice={item.itemPrice}
+                            itemBrand={item.itemBrand}
+                            itemType={item.itemType}
+                            click={this.onClickAddToCart(item)}
+                            buttonname={'Add To Cart'}
+                        ></Item>
+                    ))}
                 </div>
             </div>
         );

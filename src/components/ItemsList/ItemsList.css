@@ -1,8 +1,9 @@
 .items-wrapper {
-    width: 65%;
+    width: 40%;
     float: left;
     position: relative;
     padding: 10px;
+    margin-left: 10%;
 }
 
 .items-list {
@@ -16,8 +17,4 @@
 .items-table {
     border-collapse: collapse;
     width: 100%;
-}
-
-.items-table, th, td {
-    border: 1px solid black;
 }

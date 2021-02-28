@@ -1,6 +1,5 @@
 import './Button.css';
 
-
 function Button(props) {
     return (
         <div className={'button-wrapper'}>
