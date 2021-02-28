@@ -1,0 +1,23 @@
+.shopping-wrapper {
+    width: 30%;
+    float: left;
+    position: relative;
+    padding: 10px;
+}
+
+.shopping-cart {
+    border-width: 2px;
+    border-color: darkgray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.shopping-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.shopping-table, th, td {
+    border: 1px solid black;
+}

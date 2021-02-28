@@ -1,0 +1,10 @@
+.button-wrapper {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.custom-button {
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+}

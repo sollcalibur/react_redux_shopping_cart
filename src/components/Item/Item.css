@@ -1,0 +1,24 @@
+.item-wrapper {
+    text-align: left;
+    padding: 10px;
+}
+
+.item {
+    border-style: solid;
+    border-radius: 3px;
+    border-color: dimgray;
+    padding: 5px;
+}
+
+.item-body {
+    margin: 15px;
+}
+
+.item-info {
+    display: inline;
+}
+
+.item-actions {
+    float: right;
+    margin-right: 10px;
+}

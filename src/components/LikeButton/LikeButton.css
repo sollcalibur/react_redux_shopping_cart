@@ -1,0 +1,19 @@
+.button-wrapper {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.button {
+    border-radius: 3px;
+    color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+.like-button {
+    background-color: cornflowerblue;
+}
+
+.unlike-button {
+    background-color: chocolate;
+}
